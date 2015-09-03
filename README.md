@@ -5,7 +5,7 @@ This guide is a little different with Atmel document  https://github.com/linux4s
 ,especially, step1 to step8.
 
 Build procedure
-======================
+=========================================
 
 (1) Clone yocto/poky-fido git repository
     git clone -b fido git://git.yoctoproject.org/poky.git 
@@ -22,7 +22,7 @@ Build procedure
     git clone -b fido git://github.com/linux4sam/meta-atmel.git meta-atmel
 
 (6) Initialize build directory
-source oe-init-build-env build-atmel
+    source oe-init-build-env build-atmel
 
 (7) Add meta-atmel layer patch to bblayer configuration file
     vim conf/bblayers.conf
