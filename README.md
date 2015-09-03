@@ -8,20 +8,25 @@ Build procedure
 =========================================
 
 (1) Clone yocto/poky-fido git repository
+
     git clone -b fido git://git.yoctoproject.org/poky.git 
 
 (2) cd poky
 
 (3) Clone meta-openembedded git repository
+
     git clone -b fido git://git.openembedded.org/meta-openembedded
 
 (4) Clone meta-qt5 git repository
+
     git clone -b fido git://github.com/meta-qt5/meta-qt5.git
 
 (5) Clone meta-atmel layer
+
     git clone -b fido git://github.com/linux4sam/meta-atmel.git meta-atmel
 
 (6) Initialize build directory
+
     source oe-init-build-env build-atmel
 
 (7) Add meta-atmel layer patch to bblayer configuration file
