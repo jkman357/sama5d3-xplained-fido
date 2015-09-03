@@ -30,8 +30,9 @@ Build procedure
     source oe-init-build-env build-atmel
 
 (7) Add meta-atmel layer patch to bblayer configuration file
-    vim conf/bblayers.conf
 
+    vim conf/bblayers.conf
+    
     # LAYER_CONF_VERSION is increased each time build/conf/bblayers.conf
     # changes incompatibly
     LCONF_VERSION = "6"
@@ -81,17 +82,17 @@ Build procedure
     bitbake core-image-minimal
 
 (10) We found that additional local.conf changes are needed for our QT demo
-     image. You can add these two lines at the end of the file:
+     image. You can add these two lines at the end of the file: 
      
      vim conf/local.conf
-     
+    
      [...]
      LICENSE_FLAGS_WHITELIST += "commercial"
      SYSVINIT_ENABLED_GETTYS = ""
 
 (11) Build Atmel demo images
-     
-     bitbake atmel-qt5-demo-image
+
+    bitbake atmel-qt5-demo-image
 
 WARNING: Host distribution "Ubuntu-15.04" has not been validated with this version of the build system; you may possibly experience unexpected failures. It is recommended that you use a tested distribution.
 Parsing recipes: 100% |####################################################################################################################################| Time: 00:01:37
