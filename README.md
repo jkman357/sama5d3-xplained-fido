@@ -53,7 +53,9 @@ Build procedure
             ${BSPDIR}/meta-openembedded/meta-ruby \
             "
 (8) Edit local.conf to specify the machine, location of source archived, package type (rpm, deb or ipk)
+
     vim conf/local.conf
+   
     [...]
     MACHINE ??= "sama5d4ek"
     [...]
@@ -75,22 +77,27 @@ Build procedure
         DISTRO = "poky-atmel"
 
 (9) Build core minimal image
+
     bitbake core-image-minimal
 
 (10) We found that additional local.conf changes are needed for our QT demo
      image. You can add these two lines at the end of the file:
+     
      vim conf/local.conf
+     
      [...]
      LICENSE_FLAGS_WHITELIST += "commercial"
      SYSVINIT_ENABLED_GETTYS = ""
 
 (11) Build Atmel demo images
+     
      bitbake atmel-qt5-demo-image
 
 WARNING: Host distribution "Ubuntu-15.04" has not been validated with this version of the build system; you may possibly experience unexpected failures. It is recommended that you use a tested distribution.
 Parsing recipes: 100% |####################################################################################################################################| Time: 00:01:37
 Parsing of 1753 .bb files complete (0 cached, 1753 parsed). 2247 targets, 310 skipped, 0 masked, 0 errors.
 NOTE: Resolving any missing task queue dependencies
+
 
 Build Configuration:
 BB_VERSION        = "1.26.0"
