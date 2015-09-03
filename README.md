@@ -2,7 +2,7 @@
 How to build yocto projects on platform sama5d3-xplained
 
 This guide is a little different with Atmel document  https://github.com/linux4sam/meta-atmel
-,especially, step1 to step5.
+,especially, step1 to step8.
 
 Build procedure
 ======================
